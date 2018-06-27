@@ -3,15 +3,18 @@
 class Anagram
   attr_accessor :name
 
-  def initialize(name)
-    @aname = name
+  def initialize(word)
+    @word = word
   end
 
   def match(array)
-    name_array = name.split("").sort
-    array.collect do |potential_anagram|
+    word_array = word.split("").sort
+    matched_anagrams = []
+    array.each do |potential_anagram|
       pot_ana_array = potential_anagram.split("").sort
-      if
+      if pot_ana_array == name_array
+        matched_anagrams << potential_anagram
+      end
     end
 
 
