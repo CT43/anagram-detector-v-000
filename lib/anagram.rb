@@ -12,7 +12,7 @@ class Anagram
     matched_anagrams = []
     array.each do |potential_anagram|
       pot_ana_array = potential_anagram.split("").sort
-      if pot_ana_array == name_array
+      if pot_ana_array == word_array
         matched_anagrams << potential_anagram
       end
     end
